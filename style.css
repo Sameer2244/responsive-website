@@ -2,12 +2,13 @@
 *{
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
     font-size: large;
-    animation: fading 1s; 
 }
 
 .container{
@@ -37,6 +38,7 @@ body{
     display: block;
     padding:1rem 2rem;
     text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .nav-links li:hover{
@@ -60,6 +62,58 @@ body{
     width: 100%;
     background-color: #fff;
     border-radius: 10%;
+}
+
+.main-title h2{
+    text-align: center;
+    margin-top: 2%;
+}
+.part1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fading 2s;
+    background: rgb(230, 233, 196);
+    margin:5% 0;
+}
+.part1 img{
+    box-shadow: 3px 3px 2px #000;
+    animation: move 2s;
+}
+
+.part1 p{
+    width: 50%;
+    padding:2rem;
+}
+.part1 h2{
+    align-self: flex-start;
+    padding: 1rem;
+    border: #333 3px solid;
+}
+.part2 h2{
+    align-self: flex-start;
+    padding: 1rem;
+    border: #333 3px solid;
+}
+.part2{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: rgb(230, 233, 196);
+    margin:5% 0;
+}
+.part2 img{
+    box-shadow: 3px 3px 2px #000;
+    margin: 20px;
+    animation: move 2s;
+}
+.part2 .inner-part2{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.part2 .inner-part2 p{
+    padding: 2rem;
 }
 
 
@@ -111,7 +165,16 @@ body{
         padding-right: 0%;
     }
 }
-@keyframes fading {
+
+@keyframes move {
+    from{
+        margin-left: -1000px;
+    }
+    to{
+        margin-left:0px;
+    }
+}
+@keyframes   fading {
     from {
         opacity: 0;
     }
