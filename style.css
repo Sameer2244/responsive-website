@@ -79,6 +79,7 @@ body{
 .part1 img{
     box-shadow: 3px 3px 2px #000;
     animation: move 2s;
+    margin: 20px;
 }
 
 .part1 p{
