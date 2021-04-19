@@ -1,0 +1,121 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    animation: fading 1s; 
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    align-items: center;
+    color: #fff;
+}
+.brand-name{
+    padding-left: 2%;
+    font-family: 'Lobster', cursive;
+    text-shadow: 3px 2px 2px black;
+    align-self: flex-start;
+}
+.nav-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.nav-links li{
+    
+    list-style: none;
+}
+.nav-links li a{
+    color: #fff;
+    display: block;
+    padding:1rem 2rem;
+    text-decoration: none;
+}
+
+.nav-links li:hover{
+    background-color: #000;
+}
+
+.dropdownbtn{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 30px;
+    
+}
+
+.dropdownbtn .bar{
+    height: 20%;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10%;
+}
+
+
+@media (max-width: 650px){
+    .dropdownbtn{
+        display: flex;
+        animation: fading 1s; 
+    }
+    .container{
+        flex-direction: column;
+        justify-content: space-around;
+        animation: fading 1s; 
+    }
+    
+    .nav-links ul{
+        flex-direction: column;
+    }
+    .nav-links li a{
+        padding:0.7rem 5rem;
+    }
+    .nav-links{
+        display:none;
+    }
+    .nav-links.active{
+        display: flex;
+        animation: fading 1s;
+    }
+    .container.smooth{
+        animation: displayItems 1s;
+    }
+    .brand-name.anime{
+        animation: align-brand-name 2s;
+        align-self: center;
+    }
+}
+@keyframes displayItems {
+    from{
+        height: 120px;
+    }
+    to{
+        height:200px;
+    }
+}
+@keyframes align-brand-name {
+    from{
+        padding-right: 65%;
+    }
+    to{
+        padding-right: 0%;
+    }
+}
+@keyframes fading {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
