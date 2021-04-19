@@ -117,7 +117,7 @@ body{
 }
 
 
-@media (max-width: 650px){
+@media (max-width: 450px){
     .dropdownbtn{
         display: flex;
         animation: fading 1s; 
